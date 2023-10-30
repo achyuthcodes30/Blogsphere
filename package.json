@@ -1,0 +1,12 @@
+{
+  "name": "blogsphere",
+  "version": "1.0.0",
+  "description": "A blogging website built with the mern stack and auth for PES 3rd sem web tech mini project.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
