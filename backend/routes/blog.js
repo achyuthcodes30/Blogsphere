@@ -10,8 +10,14 @@ router.route('/blogs')
     .get(catcher(blog.getBlogs))
     .post(upload.single('image'),validateBlog,catcher(blog.writeBlog))
 
+router.route('/blogs/search')
+    .get(catcher(blog.searchBlog))
+
 router.route('/writeblog')
     .get(catcher(blog.getWriteBlogForm))
+
+router.route('/:type')
+    .get(catcher(blog.getBlogByCategory))
 
 router.route('/blogs/:id')
     .get(catcher(blog.getBlogById))
