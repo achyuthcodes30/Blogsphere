@@ -4,6 +4,7 @@ const Blog = require('./models/blog.js')
 const cors = require('cors');
 const blog = require('./routes/blog.js')
 const expressError = require('./utils/expressError')
+const path = require('path');
 
 const app=express()
 async function main(){
@@ -20,7 +21,7 @@ main()
 app.use(cors());
 app.use(express.urlencoded({extended: true}))
 app.use('/', blog);
-
+app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 // Error middleware
 app.all('*',(req,res,next) =>{
   next(new expressError('Page not found!',404))

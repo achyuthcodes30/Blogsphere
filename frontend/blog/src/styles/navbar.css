@@ -1,0 +1,69 @@
+nav{
+  background-color: black;
+    width: 100%;
+    height: 10vh;
+    display : flex;
+    top: 0;
+    flex-direction: row;
+    margin: 0;
+    align-items: center;
+}
+
+.background-video{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.logo{
+    justify-content: flex-start;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 600;
+    margin-left: 1%;
+    margin-top: 1%;
+    height: 100%;
+    position: relative;
+}
+  
+.nav-content{
+justify-content: flex-end;
+font-family: cursive;
+font-weight: 900;
+margin-left: 68%;
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+width: 13rem;
+position: relative;
+}
+
+.homelink{
+    color: white;
+    text-decoration: none;
+    font-size: 3rem;
+    /*animation: glow 2s ease-in-out infinite alternate; */
+    text-shadow: 0 0 10px #fff, 0 0 20px #d4bfff, 0 0 20px #6600cc, 0 0 20px #6600cc, 0 0 30px #6600cc;
+    position: relative;
+
+}
+
+    
+ /* @keyframes glow {
+        from {
+          text-shadow: 0 0 0px #fff, 0 0 0px #d4bfff, 0 0 2px #d4bfff, 0 0 2px #d4bfff, 0 0 2px #d4bfff, 0 0 2px #d4bfff, 0 0 2px #d4bfff;
+        }
+      
+        to {
+          text-shadow: 0 0 10px #fff, 0 0 10px #6600cc, 0 0 10px #6600cc, 0 0 10px #6600cc, 0 0 10px #6600cc, 0 0 10px #6600cc, 0 0 10px #6600cc;
+        }
+      } */
+
+.link{
+    color: white;
+    text-decoration: none;
+    font-size: 1.25rem;
+    position: relative;
+
+}
