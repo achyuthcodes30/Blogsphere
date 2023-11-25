@@ -29,7 +29,7 @@ const SearchResults = () => {
           };
       
           fetchData();
-        }, []);
+        }, [location.search]);
   
     return(
         <div className='blogsearches'>
