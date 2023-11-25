@@ -2,24 +2,29 @@
     color: black;
     background-color: white;
     margin: auto;
-    border-radius: 1rem;
+    height: 100%;
     width: 80%;
-    height: 60%;
-    margin-bottom: 5%;
+    border-radius: 1rem;
+    margin: 5%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
   }
-
 .blog-div{
     overflow-x: hidden;
-    overflow-y: auto;
-    height: 80vh;
-    width: 80vw;
+    overflow-y: scroll;
+    display: flex;
     justify-content: center;
-    margin: 10% auto;
-
+    height: 100%;
+    width: 80%;
+    margin: 0 auto;
 }
 
-body{
-    overflow: hidden;
+.blog:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.linker{
+    text-decoration: none;
 }
 
 img{

@@ -1,17 +1,17 @@
 import React, { useEffect, useState,useRef } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import axios from 'axios';
 import '../styles/blogs.css'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
-const BlogList = () => {
+const BlogsByType = () => {
   const [blogs, setBlogs] = useState([]);
-
+  const {type} = useParams()
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get('/blogs', { baseURL: 'http://localhost:3000' });
+        const response = await axios.get(`/${type}`, { baseURL: 'http://localhost:3000' });
         setBlogs(response.data);
         console.log(response.data)
       } catch (error) {
@@ -31,11 +31,11 @@ const BlogList = () => {
           AOS.refresh();
       }, []); */}
     return(
-        <div className='blogpage'>
-          <div className='blog-div' style={{position: 'relative'}}>
+        
+          <div className='blogtypes'>
         {blogs.map((blog) => (
           <Link to={`/blogs/${blog._id}`} className='linker'>
-          <div key={blog.id} className='blog'>
+          <div key={blog.id} className='blogtype' style={{ position: 'relative' }}>
             <h2>{blog.title}</h2>
             <p>Type: {blog.type}</p>
             <p>Author: {blog.author}</p>
@@ -50,8 +50,8 @@ const BlogList = () => {
           </Link>
         ))}
       </div> 
-    </div>
     );
   };
 
-  export default BlogList;
+  export default BlogsByType;
+
